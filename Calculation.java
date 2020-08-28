@@ -1,16 +1,29 @@
-class Calculation{
+
+class Calculation {
     int z;
 
     public void addition(int x, int y) {
-
+        z = x + y;
+        System.out.println("The sum of the given numbers:"+z);
     }
 
-    int z= int x + int y;
-    System.out.println("addition is :"+z);
-
+    public void Subtraction(int x, int y) {
+        z = x - y;
+        System.out.println("The difference between the given numbers:"+z);
+    }
 }
-    public static void main(Strings args[]){
-    int x= 10,int y =20;
-    new_calc = Calculations();
-    new_calc.addition(int x , int y);
+
+class My_Calculation extends Calculation {
+    public void multiplication(int x, int y) {
+        z = x * y;
+        System.out.println("The product of the given numbers:"+z);
     }
+
+    public static void main(String args[]) {
+        int a = 20, b = 10;
+        My_Calculation demo = new My_Calculation();
+        demo.addition(a, b);
+        demo.Subtraction(a, b);
+        demo.multiplication(a, b);
+    }
+}
